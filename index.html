@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: lightskyblue;">
+  <div id="alert" class="alert sticky-top" style="display: none;"></div>
+
+  <div class="task-form-container">
+    <div class="container">
+      <h1 class="display-3" style="font-size: 3rem;font-weight: 400;">WEB TASK MANAGER</h1>
+      <br>
+      <blockquote class="blockquote text-right">
+        <footer class="blockquote-footer" style="font-weight: 600;">"Manage Your Tasks Efficiently and Easily.</footer>
+      </blockquote>
+    </div>
+
+    
+
+    <form id="taskForm">
+      <label for="task">Task:</label>
+      <input type="text" id="task" required>
+
+      <label for="deadline">Deadline:</label>
+      <input type="date" id="deadline" required>
+
+      <label for="priority">Priority:</label>
+      <select id="priority" required>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+
+      <label for="label">Label:</label>
+      <input type="text" id="label" required>
+
+      <button type="submit">Add Task</button>
+    </form>
+  </div>
+
+  <div id="filterButtons">
+
+    <div id="filterOptions">
+      <label for="priorityFilter">Filter by Priority : </label>
+      <select id="priorityFilter">
+        <option value="all">All</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button id="filterByPriority">Filter</button>
+    </div>
+
+    <h2 id="countElement"><span id="taskCount"></span></h2>
+  </div>
+
+
+  <div id="countBox"><b><span id="countElementHigh"></span></b><b><span id="countElementMedium"></span></b><b><span
+        id="countElementLow"></span></b></div>
+
+
+
+  <ul id="taskList">
+    <!-- Tasks will be dynamically added here -->
+  </ul>
+
+  <button id="clearTasksBtn">Clear All Tasks</button>
+
+  
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
